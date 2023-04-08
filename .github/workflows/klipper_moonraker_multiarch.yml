@@ -27,7 +27,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=$(echo ghcr.io/${{ vars.GITHUB_REPOSITORY_OWNER }} | tr '[A-Z]' '[a-z]')/klipper-moonraker
+          DOCKER_IMAGE=$(echo ghcr.io/${{ github.actor }} | tr '[A-Z]' '[a-z]')/klipper-moonraker
           DATE=${{steps.date.outputs.date}}
           BRANCH=${GITHUB_REF##*/}
 

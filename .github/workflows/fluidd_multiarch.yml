@@ -19,7 +19,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=$(echo ghcr.io/${{ vars.GITHUB_REPOSITORY_OWNER }} | tr '[A-Z]' '[a-z]')/fluidd
+          DOCKER_IMAGE=$(echo ghcr.io/${{ github.actor }} | tr '[A-Z]' '[a-z]')/fluidd
           VERSION=latest
           DATE=${{steps.date.outputs.date}}
 
